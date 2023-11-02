@@ -3,6 +3,9 @@ on: push          #on: いつこのワークフローを走らせるか
 jobs:             #走らせたい処理（ジョブ）のリスト
   test:           #testというジョブを作る
     runs-on: ubuntu-latest   #どの環境で動かすか
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.9", "3.10"]
     steps:                   #手続きの記述
     - uses: actions/checkout@v3  #https://github.com/actions/checkoutのバージョン3を使用
     - name: All test             #このジョブの名前
