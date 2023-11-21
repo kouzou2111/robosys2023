@@ -1,8 +1,82 @@
 # robosys2023
-実行テスト
 
+2023年ロボットシステム学講義用リポジトリ
+
+## リポジトリ内で使用できるコマンド
+
+・plus
+
+・uranai.py
+
+## plusコマンドの概要
+
+標準入力から読み込んだ数値を足す
+
+## 使用方法
+
+```bash
+$ seq 10 | ./plus
+55
+```
+## uranai.pyコマンドの概要
+
+標準入力から数字(1~10000)を読み込むとおみくじ、相性のいい星座、相性のいい血液型、ラッキーカラー、ラッキーアイテムを独立したファイルからランダムで取り出し出力する。
+（ヒント：貢ぐお金の額によって若干排出されるおみくじの確率が変動する）
+
+## 使用方法
+
+```bash
+$ python3 uranai.py
+1~10000 円入れてください  # <-例として500を入れる
+どうも
+
+おみくじの結果： 末吉
+
+相性がいい星座： 水瓶座
+
+相性がいい血液型： O型
+
+ラッキーカラー： 茶色
+
+ラッキーアイテム： 本
+```
+
+## インストール方法
+下記のコードをホームディレクトリでクローンすることで利用できます
+```
+git clone git@github.com:kouzou2111/robosys2023.git
+```
+
+## コマンド使用までの手順
+㏅コマンドを使いrobosys2023ディレクトリに移動してください
+```
+cd robosys2023
+```
+使用したいコマンドを上記の方法で選択してください
+
+## 動作環境
+### 必要なソフトウェア　
+
+
+
+
+続きはここから
+
+* python
+  * テスト済み：3.7 ~ 3.10
+
+
+
+
+
+
+
+
+### テスト環境
+* Ubuntu 20.04 on Windows
+
+## ライセンス
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
-* このパッケージのコードは，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
-    * [ryuichiueda/my_slides robosys_2022](https://github.com/ryuichiueda/my_slides/tree/master/robosys_2022)
-* © 2023 kouzou2111
-
+    * このパッケージのuranai.py,omikuzi.txt,omikuzi2.txt,omikuzi3.txt,omikuzi4.txt,ketueki.txt,color.txt,item.txt,uranaitest.bash以外のコマンドとコードは，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
+         * [ryuichiueda/my_slides robosys_2022](https://github.com/ryuichiueda/my_slides/tree/master/robosys_2022)
+    * © 2023 kouzou2111
