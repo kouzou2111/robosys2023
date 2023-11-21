@@ -35,7 +35,7 @@ try:
         print("こんなにもらえません!!")
     else :
         raise ValueError("数字以外が入力されました")
-    if num != 0 or 10001 <= num:
+    if 1 < num <= 10000:
         seiza = get_random_data("seiza.txt")
         print("相性がいい星座：",seiza)
 except ValueError as e:
