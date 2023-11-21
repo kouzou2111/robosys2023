@@ -9,7 +9,6 @@ def get_random_data(filename):
         data = file.readlines()
         return random.choice(data)
 
-#num = int(input("1~10000 円入れてください"))
 
 #def main():
 num = int(input("1~10000 円入れてください"))
@@ -24,12 +23,18 @@ else:
     elif 501 <= num <= 3000:
         print("ありがとうございます")
         omikuzi2 = get_random_data("omikuzi2.txt")
-        print("おみくじの結果：",omikuzi2
+        print("おみくじの結果：",omikuzi2)
     elif 3001 <= num <= 8000:
         print("ありがとうございます!")
         omikuzi3 = get_random_data("omikuzi3.txt")
-        print("おみくじの結果：",omikuzi3))
+        print("おみくじの結果：",omikuzi3)
     elif 8001 <= num <= 10000:
         print("ありがとうございます!!")
-        omikuzi3 = get_random_data("omikuzi3.txt")
-        print("おみくじの結果：",omikuzi3)
+        omikuzi4 = get_random_data("omikuzi4.txt")
+        print("おみくじの結果：",omikuzi4)
+    elif 10001 <= num:
+        print("こんなにもらえません!!")
+    else :
+        raise ValueError("数字以外が入力されました")
+        #print("ごみをいれるな!")
+
