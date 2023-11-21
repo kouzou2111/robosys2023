@@ -11,12 +11,11 @@ def get_random_data(filename):
 
 
 #def main():
-num = int(input("1~10000 円入れてください"))
-
-if num == 0:
-    print("帰れ！")
-else:
-    if 1 <= num <= 500:
+try:
+    num = int(input("1~10000 円入れてください"))
+    if num == 0:
+        print("帰れ！")
+    elif 1 <= num <= 500:
         print("どうも")
         omikuzi = get_random_data("omikuzi.txt")
         print("おみくじの結果：",omikuzi)
@@ -36,5 +35,8 @@ else:
         print("こんなにもらえません!!")
     else :
         raise ValueError("数字以外が入力されました")
-        #print("ごみをいれるな!")
-
+    if num != 0 or 10001 <= num:
+        seiza = get_random_data("seiza.txt")
+        print("相性がいい星座：",seiza)
+except ValueError as e:
+    print("ごみをいれるな!")
