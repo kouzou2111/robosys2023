@@ -24,4 +24,12 @@ else:
     elif 501 <= num <= 3000:
         print("ありがとうございます")
         omikuzi2 = get_random_data("omikuzi2.txt")
-        print("おみくじの結果：",omikuzi2)
+        print("おみくじの結果：",omikuzi2
+    elif 3001 <= num <= 8000:
+        print("ありがとうございます!")
+        omikuzi3 = get_random_data("omikuzi3.txt")
+        print("おみくじの結果：",omikuzi3))
+    elif 8001 <= num <= 10000:
+        print("ありがとうございます!!")
+        omikuzi3 = get_random_data("omikuzi3.txt")
+        print("おみくじの結果：",omikuzi3)
