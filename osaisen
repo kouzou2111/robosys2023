@@ -3,17 +3,24 @@
 # SPDX-License-Identifier: BSD-3-clause
 
 import random
+import sys
 
 def get_random_data(filename):
     with open(filename, 'r') as file:
-        data = file.readlines()
+        data =file.readlines()
         return random.choice(data)
+        #line = file.readlines()
+        #for line in lines:
+            #if line.startswith(filename):
+                #return random.choice(line)[1]
+    #return 
 
 #def main():
 try:
-    num = int(input("1~10000 円入れてください"))
+    #num = int(input("1~10000 円入れてください"))
+    num = int(sys.argv[1])
     if num == 0:
-        print("\n帰れ！")
+        print("\n帰れ！\n")
     elif 1 <= num <= 500:
         print("\nどうも\n")
         omikuzi = get_random_data("omikuzi.txt")
@@ -31,7 +38,7 @@ try:
         omikuzi4 = get_random_data("omikuzi4.txt")
         print("おみくじの結果：",omikuzi4)
     elif 10001 <= num:
-        print("\nこんなにもらえません!!")
+        print("\nこんなにもらえません!!\n")
     else :
         raise ValueError("数字以外が入力されました")
     if 1 <= num <= 10000:
@@ -47,4 +54,4 @@ try:
         item = get_random_data("item.txt")
         print("ラッキーアイテム：",item)
 except ValueError as e:
-    print("ごみをいれるな!")
+    print("\nごみをいれるな!\n")
