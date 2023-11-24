@@ -6,7 +6,7 @@
 
 ・plus
 
-・uranai.py
+・osaisen
 
 ## plusコマンドの概要
 
@@ -18,7 +18,7 @@
 $ seq 10 | ./plus
 55
 ```
-## uranai.pyコマンドの概要
+## osaisenコマンドの概要
 
 標準入力から数字(1~10000)を読み込むとおみくじ、相性のいい星座、相性のいい血液型、ラッキーカラー、ラッキーアイテムを独立したファイルからランダムで取り出し出力する。
 （ヒント：貢ぐお金の額によって若干排出されるおみくじの確率が変動する）
@@ -26,7 +26,7 @@ $ seq 10 | ./plus
 ## 使用方法
 
 ```bash
-$ python3 uranai.py
+$ osaisen
 1~10000 円入れてください  # <-例として500を入れる
 どうも
 
@@ -41,13 +41,17 @@ $ python3 uranai.py
 ラッキーアイテム： 本
 ```
 
-## インストール方法
+
 下記のコードをホームディレクトリでクローンすることで利用できます
 ```
 git clone git@github.com:kouzou2111/robosys2023.git
 ```
 
 ## コマンド使用までの手順
+下記のコードをホームディレクトリでクローンすることで利用できます
+```
+git clone https://github.com/kouzou2111/robosys2023.git
+```
 ㏅コマンドを使いrobosys2023ディレクトリに移動してください
 ```
 cd robosys2023
@@ -66,17 +70,11 @@ cd robosys2023
   * テスト済み：3.7 ~ 3.10
 
 
-
-
-
-
-
-
 ### テスト環境
 * Ubuntu 20.04 on Windows
 
 ## ライセンス
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
-    * このパッケージのuranai.py,omikuzi.txt,omikuzi2.txt,omikuzi3.txt,omikuzi4.txt,ketueki.txt,color.txt,item.txt,uranaitest.bash以外のコマンドとコードは，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
+    * このパッケージのosaisen,omikuzi.txt,omikuzi2.txt,omikuzi3.txt,omikuzi4.txt,ketueki.txt,color.txt,item.txt,osaisentest.bash以外のコマンドとコードは，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
          * [ryuichiueda/my_slides robosys_2022](https://github.com/ryuichiueda/my_slides/tree/master/robosys_2022)
     * © 2023 kouzou2111

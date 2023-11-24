@@ -13,25 +13,25 @@ def get_random_data(filename):
 try:
     num = int(input("1~10000 円入れてください"))
     if num == 0:
-        print("帰れ！")
+        print("\n帰れ！")
     elif 1 <= num <= 500:
-        print("どうも\n")
+        print("\nどうも\n")
         omikuzi = get_random_data("omikuzi.txt")
         print("おみくじの結果：",omikuzi)
     elif 501 <= num <= 3000:
-        print("ありがとうございます\n")
+        print("\nありがとうございます\n")
         omikuzi2 = get_random_data("omikuzi2.txt")
         print("おみくじの結果：",omikuzi2)
     elif 3001 <= num <= 8000:
-        print("ありがとうございます!\n")
+        print("\nありがとうございます!\n")
         omikuzi3 = get_random_data("omikuzi3.txt")
         print("おみくじの結果：",omikuzi3)
     elif 8001 <= num <= 10000:
-        print("ありがとうございます!!\n")
+        print("\nありがとうございます!!\n")
         omikuzi4 = get_random_data("omikuzi4.txt")
         print("おみくじの結果：",omikuzi4)
     elif 10001 <= num:
-        print("こんなにもらえません!!")
+        print("\nこんなにもらえません!!")
     else :
         raise ValueError("数字以外が入力されました")
     if 1 <= num <= 10000:
