@@ -9,15 +9,8 @@ def get_random_data(filename):
     with open(filename, 'r') as file:
         data =file.readlines()
         return random.choice(data)
-        #line = file.readlines()
-        #for line in lines:
-            #if line.startswith(filename):
-                #return random.choice(line)[1]
-    #return 
 
-#def main():
 try:
-    #num = int(input("1~10000 円入れてください"))
     num = int(sys.argv[1])
     if num == 0:
         print("\n帰れ！\n")
@@ -40,17 +33,14 @@ try:
     elif 10001 <= num:
         print("\nこんなにもらえません!!\n")
     else :
-        raise ValueError("数字以外が入力されました")
+        raise ValueError("数字以外の入力を検知")
     if 1 <= num <= 10000:
         seiza = get_random_data("seiza.txt")
         print("相性がいい星座：",seiza)
-        
         ketueki = get_random_data("ketueki.txt")
         print("相性がいい血液型：",ketueki)
-        
         color = get_random_data("color.txt")
         print("ラッキーカラー：",color)
-        
         item = get_random_data("item.txt")
         print("ラッキーアイテム：",item)
 except ValueError as e:
