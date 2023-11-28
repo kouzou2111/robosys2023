@@ -3,9 +3,9 @@
 # SPDX-License-Identifier: BSD-3-clause
 ng () {
       echo NG at Line ${1}
-      res=1
+      rtn=1
 }
-res=0
+rtn=0
 
 ### 正常なインプット###
 
@@ -35,5 +35,5 @@ out=$(./osaisen 10001)
  [ "$?" = 1 ] || ng ${LINENO}
  [ "$out" = "こんなにもらえません!!" ] || ng ${LINENO}
 
-[ "$res" = 0 ] && echo OK
-exit $res
+[ "$rtn" = 0 ] && echo OK
+exit $rtn
