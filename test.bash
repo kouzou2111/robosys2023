@@ -23,5 +23,5 @@ out=$(echo | ./plus)
  [ "${out}" = "" ] || ng ${LINENO}
 
 
-[ "$res" = 0 ] && echo OK        # &&（AND記号）は左側が成功すると右側を実行
-exit $res
+[ "$ret" = 0 ] && echo OK        # &&（AND記号）は左側が成功すると右側を実行
+exit $ret
