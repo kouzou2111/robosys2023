@@ -1,4 +1,4 @@
-#!/usr/bin/bash 
+#!/usr/bin/bash  
 # SPDX-FileCopyrightText:2023 kouzou2111
 # SPDX-License-Identifier: BSD-3-clause
 ng () {
@@ -10,9 +10,18 @@ rtn=0
 ### 正常なインプット###
 
 out=$(./osaisen 1) #<-1~10000を入力、一例として1を入力。出力結果はランダム
- #<-出力結果が別のテーブルからランダムに出力されるためかテストが困難
+ [ "$?" = 0 ] || ng ${LINENO} 
+#<-出力結果が別のテーブルからランダムに出力されるためかテストが困難
 
 ### 間違ったインプット###
+
+out=$(./osaisenl)
+ [ "$?" = 127 ] || ng ${LINENO}
+ [ "$out" = "" ] || ng ${LINENO}
+
+out=$(./osaisen)
+ [ "$?" = 1 ] || ng ${LINENO}
+ [ "$out" =  '' ] || ng ${LINENO}
 
 out=$(./osaisen nisesatu)
  [ "$?" = 0 ] || ng ${LINENO}
