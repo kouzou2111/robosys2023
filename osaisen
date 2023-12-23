@@ -4,12 +4,8 @@
 
 import random
 import sys
-import os
 
 def get_random_data(filename):
-    if not os.path.isfile(filename):
-        print("あなたは神隠しに遭っています")
-        sys.exit()
     with open(filename, 'r') as file:
         data =file.readlines()
         return random.choice(data)
