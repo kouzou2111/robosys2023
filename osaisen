@@ -11,6 +11,8 @@ def get_random_data(filename):
         return random.choice(data)
 
 try:
+    if len(sys.argv) != 2 or not sys.argv[1].isdigit():
+        raise ValueError("数字以外の入力を検知")
     num = int(sys.argv[1])
     if num == 0:
         print("\n帰れ！\n")
@@ -32,8 +34,6 @@ try:
         print("おみくじの結果：",omikuzi4)
     elif 10001 <= num:
         print("\nこんなにもらえません!!\n")
-    else :
-        raise ValueError("数字以外の入力を検知")
     if 1 <= num <= 10000:
         seiza = get_random_data("seiza.txt")
         print("相性がいい星座：",seiza)

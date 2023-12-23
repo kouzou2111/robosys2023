@@ -17,11 +17,17 @@ out=$(./osaisen 1) #<-1~10000を入力、一例として1を入力。出力結�
 
 out=$(./osaisenl)
  [ "$?" = 127 ] || ng ${LINENO}
- [ "$out" = "" ] || ng ${LINENO}
+ [ "$out" = "-bash: ./osaisenl: そのようなファイルやディレクトリはありません" ] || ng ${LINENO}
 
 out=$(./osaisen)
- [ "$?" = 1 ] || ng ${LINENO}
- [ "$out" =  '' ] || ng ${LINENO}
+ [ "$?" = 0 ] || ng ${LINENO}
+ [ "$out" =  '
+ごみをいれるな!' ] || ng ${LINENO}
+
+out=$(./osaisen)
+ [ "$?" = 0 ] || ng ${LINENO}
+ [ "$out" =  '
+ごみをいれるな!' ] || ng ${LINENO}
 
 out=$(./osaisen nisesatu)
  [ "$?" = 0 ] || ng ${LINENO}
