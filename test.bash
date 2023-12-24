@@ -1,6 +1,6 @@
 #!/bin/bash
-# SPDX-FileCopyrightText:2023 kouzou2111
-# SPDX-License-Identifier: BSD-3-clause
+#SPDX-FileCopyrightText: 2023 kouzou2111
+#SPDX-License-Identifier: BSD-3-clause
 
 ng () {
           echo ${1}行目が違うよ   #$1はngの1番目の引数
